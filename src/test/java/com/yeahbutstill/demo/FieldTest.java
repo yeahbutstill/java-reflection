@@ -22,18 +22,18 @@ public class FieldTest {
         Field firstName = personClass.getDeclaredField("firstName");
         firstName.setAccessible(true);
 
-        Person person1 = new Person("Dani", "Gandes");
+        Person person1 = new Person("Dani", "Gandes", 17);
         String result = (String) firstName.get(person1);
         System.out.println(result);
 
-        Person person2 = new Person("Salindri", "Setiawan");
+        Person person2 = new Person("Salindri", "Setiawan", 17);
         String result2 = (String) firstName.get(person2);
         System.out.println(result2);
     }
 
     @Test
     void testSetFieldsObject() throws NoSuchFieldException, IllegalAccessException {
-        Person person = new Person("Dani", "Gandes");
+        Person person = new Person("Dani", "Gandes", 17);
         Class<Person> personClass = Person.class;
         Field firstName = personClass.getDeclaredField("firstName");
         firstName.setAccessible(true);

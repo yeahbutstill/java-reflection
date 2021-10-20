@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class AnnotationTest {
     @Test
     void testValidateUsingAnnotation() throws IllegalAccessException {
-        Person person = new Person("Dani", "    ");
+        Person person = new Person("Dani", "    ", 28);
         Validator.validateNotBlank(person);
     }
 }

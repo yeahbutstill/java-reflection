@@ -27,7 +27,7 @@ public class ParameterTest {
     void testCallMethodObjWParam() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Class<Person> personClass = Person.class;
         Method setFirstName = personClass.getDeclaredMethod("setFirstName", String.class);
-        Person person = new Person("Dani", "Setiawan");
+        Person person = new Person("Dani", "Setiawan", 28);
         setFirstName.invoke(person, "Joko");
         System.out.println(person.getFirstName());
     }

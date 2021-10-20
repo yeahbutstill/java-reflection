@@ -23,7 +23,7 @@ public class MethodTest {
 
     @Test
     void testCallMethodObj() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Person person = new Person("Dani", "Setiawan");
+        Person person = new Person("Dani", "Setiawan", 28);
         Class<Person> personClass = Person.class;
         Method getFirstName = personClass.getDeclaredMethod("getFirstName");
         Object response = getFirstName.invoke(person);

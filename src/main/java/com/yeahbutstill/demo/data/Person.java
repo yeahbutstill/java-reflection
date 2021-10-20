@@ -11,12 +11,15 @@ public class Person implements Nameable, Serializable {
     @NotBlank(allowEmptyString = true)
     private String lastName;
 
+    private int age;
+
     public Person() {
     }
 
-    public Person(String firstName, String lastName) {
+    public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
     }
 
     public String getFirstName() {
@@ -35,11 +38,20 @@ public class Person implements Nameable, Serializable {
         this.lastName = lastName;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
