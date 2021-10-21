@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
+import java.util.Collections;
 
 public class ParameterTest {
     @Test
@@ -27,7 +28,7 @@ public class ParameterTest {
     void testCallMethodObjWParam() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Class<Person> personClass = Person.class;
         Method setFirstName = personClass.getDeclaredMethod("setFirstName", String.class);
-        Person person = new Person("Dani", "Setiawan", 28);
+        Person person = new Person("Dani", "Setiawan", 28, Collections.singletonList("renang"));
         setFirstName.invoke(person, "Joko");
         System.out.println(person.getFirstName());
     }
